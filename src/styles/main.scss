@@ -110,51 +110,51 @@ button:focus-visible {
   }
 
   &-temp {
-    background-image: url('../assets/icons/thermometer.svg');
+    background-image: url('public/icons/thermometer.svg');
   }
 
   &-humidity {
-    background-image: url('../assets/icons/humidity.svg');
+    background-image: url('public/icons/humidity.svg');
   }
 
   &-wind {
-    background-image: url('../assets/icons/wind.svg');
+    background-image: url('public/icons/wind.svg');
   }
 
   &-pressure {
-    background-image: url('../assets/icons/barometer.svg');
+    background-image: url('public/icons/barometer.svg');
   }
 
   &-sunset {
-    background-image: url('../assets/icons/sunset.svg');
+    background-image: url('public/icons/sunset.svg');
   }
 
   &-sunrise {
-    background-image: url('../assets/icons/sunrise.svg');
+    background-image: url('public/icons/sunrise.svg');
   }
 
   &-cloud {
-    background-image: url('../assets/icons/clouds.svg');
+    background-image: url('public/icons/clouds.svg');
   }
 
   &-uv {
-    background-image: url('../assets/icons/uv-index.svg');
+    background-image: url('public/icons/uv-index.svg');
   }
 
   &-temp-min {
-    background-image: url('../assets/icons/temp-min.svg');
+    background-image: url('public/icons/temp-min.svg');
   }
 
   &-temp-max {
-    background-image: url('../assets/icons/temp-max.svg');
+    background-image: url('public/icons/temp-max.svg');
   }
 
   &-clear-day {
-    background-image: url('../assets/icons/clear-day.svg');
+    background-image: url('public/icons/clear-day.svg');
   }
 
   &-sea-level {
-    background-image: url('../assets/icons/pressure-low-alt.svg');
+    background-image: url('public/icons/pressure-low-alt.svg');
   }
 }
 
@@ -174,7 +174,7 @@ button:focus-visible {
     margin-right: 10px;
     width: 80px;
     height: 60px;
-    background: url('../assets/icons/logo.svg') no-repeat;
+    background: url('public/icons/logo.svg') no-repeat;
     background-size: cover;
   }
 }
@@ -275,15 +275,15 @@ button:focus-visible {
   margin-right: 10px;
 
   &-dashboard {
-    background: url('../assets/icons/dashboard.svg') no-repeat;
+    background: url('public/icons/dashboard.svg') no-repeat;
   }
 
   &-favorites {
-    background: url('../assets/icons/favorite.svg') no-repeat;
+    background: url('public/icons/favorite.svg') no-repeat;
   }
 
   &-date {
-    background: url('../assets/icons/date.svg') no-repeat;
+    background: url('public/icons/date.svg') no-repeat;
   }
 }
 

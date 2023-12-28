@@ -1,7 +1,6 @@
 export function useUnsplash() {
   const unsplashKey = "mmGVXbWPeCO45y17EER07X3S3_xGaY8p-cDMwi0b47U"
   const perPage = 1
-  // const getImage = async (query, city) => {
   const getImage = async (query) => {
     try {
       const response = await fetch(
@@ -19,9 +18,6 @@ export function useUnsplash() {
 
       const data = await response.json()
 
-      // return photos.results.length > 0
-      //   ? (city.thumbUrl = photos.results[0].urls.regular)
-      //   : (city.thumbUrl = null)
       return data
     } catch (error) {
       console.error("Помилка при запиті до Unsplash API:", error)

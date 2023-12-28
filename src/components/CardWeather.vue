@@ -57,7 +57,6 @@ const removeCard = (city, event) => {
           localStorage.removeItem("cityNames")
         }
         if(event.target.closest("button")){
-          console.log('Delete', city)
           forecastStore.updateForecast(city, city.id)
         }
 

@@ -2,7 +2,7 @@
 import { ref } from "vue"
 
 const weatherData = ref(JSON.parse(localStorage.getItem('favoriteWeather')) || [])
-console.log(weatherData)
+
 </script>
 
 <template>

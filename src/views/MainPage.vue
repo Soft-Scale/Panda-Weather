@@ -15,7 +15,6 @@ const currentDay = ref([])
 const threeDays = ref()
 
 watch(() => storeForecast.forecastData, () => {
-  console.log('Here Store Forecast: ', storeForecast.forecastData)
   if (storeForecast.forecastData) {
     currentDay.value = [storeForecast.forecastData.forecast.forecastday[0]]
     threeDays.value = storeForecast.forecastData.forecast.forecastday

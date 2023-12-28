@@ -133,10 +133,11 @@ onMounted(async () => {
               {{ roundTemperature(city?.main?.temp) }}&#176;C
             </div>
             <div class="card-full--icon">
-              <img
-                :src="`/src/assets/icons/day/${city?.weather[0]?.main?.toLowerCase()}.svg`"
-                alt=""
-              />
+              <span class="card-full--image" :style="`background-image: url('/src/assets/icons/day/${city?.weather[0]?.main?.toLowerCase()}.svg');`"></span>
+<!--              <img-->
+<!--                :src="`/src/assets/icons/day/${city?.weather[0]?.main?.toLowerCase()}.svg`"-->
+<!--                alt=""-->
+<!--              />-->
             </div>
           </div>
           <div class="card-full--container">

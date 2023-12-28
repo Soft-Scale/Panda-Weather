@@ -493,6 +493,11 @@ button:focus-visible {
     padding: 20px;
     background: #fcfcfc;
   }
+  &--image{
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+  }
 
   &--view {
     display: flex;
@@ -555,6 +560,11 @@ button:focus-visible {
 
   &-title {
     margin-bottom: 5px;
+  }
+  &-main-icon{
+    display: inline-block;
+    width: 80px;
+    height: 80px;
   }
 
   &-main {

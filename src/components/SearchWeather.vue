@@ -31,7 +31,7 @@ const getLocation = async (city) => {
 
 const handleSelectedCity = async (selectedCity) => {
 
-  await getWeather(selectedCity.place_name, true)
+  await getWeather(selectedCity.place_name)
 
   searchCityField.value = ""
   autocompleteList.value = null

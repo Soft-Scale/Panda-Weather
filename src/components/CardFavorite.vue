@@ -14,7 +14,7 @@ console.log(weatherData)
         <div class="ticket-row">
           <div class="ticket-col">
             <img class="ticket-icon"
-                 :src="`/src/assets/icons/day/${ticket?.weather[0]?.main?.toLowerCase()}.svg`"
+                 :src="`/public/icons/day/${ticket?.weather[0]?.main?.toLowerCase()}.svg`"
                  alt=""
             />
           </div>

@@ -20,9 +20,10 @@ const prop = defineProps(["weather"])
         <div class="ticket-table">
           <div class="ticket-row">
             <div class="ticket-col">
-                <span
-                  class="ticket-main-icon"
-                  :style="`background-image: url('/src/assets/icons/day/${forecast?.day?.condition?.text.toLowerCase()}.svg');`"></span>
+                <img class="ticket-icon"
+                     :src="`/src/assets/icons/day/${forecast?.day?.condition?.text.toLowerCase()}.svg`"
+                     alt=""
+                />
             </div>
             <div class="ticket-col">
               <div class="ticket-temp">

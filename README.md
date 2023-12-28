@@ -1,7 +1,26 @@
-# Vue 3 + Vite
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+# Panda Weather
 
-## Recommended IDE Setup
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+A weather website so that everyone can see and know the temperature in their city or other locations.
+
+
+## What APIs are used in the project
+
+ - [Freeipapil.com](https://freeipapi.com/api/json) - this is an API for determining the current IP
+ - [Weatherapi.com](https://api.weatherapi.com/v1/forecast.json?) - this is an API for getting forecast data
+ - [Unsplash.com](https://api.unsplash.com/search/photos?) - is a bot to upload images to add to each city
+ - [Openweathermap.org](https://api.openweathermap.org/data/2.5/weather?) - this is an API for getting weather data
+
+
+## Running Tests
+
+Run command for develop
+```bash
+  npm run dev
+```
+Run command for build
+```bash
+  npm run build
+```
+

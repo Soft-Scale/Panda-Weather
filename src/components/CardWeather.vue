@@ -72,9 +72,6 @@ const handleCardClick = (city, event) => {
     forecastStore.updateForecast(city)
   }
 }
-const isFavorite = (city) => {
-  return favoriteWeatherList.value.some((item) => item.id === city.id);
-}
 
 const toggleCard = (city, event) => {
   const index = favoriteWeatherList.value.findIndex((item) => item.id === city.id);

@@ -14,7 +14,7 @@ const weatherData = ref(JSON.parse(localStorage.getItem('favoriteWeather')) || [
         <div class="ticket-row">
           <div class="ticket-col">
             <img class="ticket-icon"
-                 :src="`/public/icons/day/${ticket?.weather[0]?.main?.toLowerCase()}.svg`"
+                 :src="`/icons/day/${ticket?.weather[0]?.main?.toLowerCase()}.svg`"
                  alt=""
             />
           </div>
@@ -83,7 +83,3 @@ const weatherData = ref(JSON.parse(localStorage.getItem('favoriteWeather')) || [
     </div>
   </div>
 </template>
-
-<style scoped>
-
-</style>

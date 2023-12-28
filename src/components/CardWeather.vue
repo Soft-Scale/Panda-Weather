@@ -134,7 +134,7 @@ onMounted(async () => {
             </div>
             <div class="card-full--icon">
               <img
-                :src="`/public/icons/day/${city?.weather[0]?.main?.toLowerCase()}.svg`"
+                :src="`/icons/day/${city?.weather[0]?.main?.toLowerCase()}.svg`"
                 alt=""
               />
             </div>

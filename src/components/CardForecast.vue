@@ -21,7 +21,7 @@ const prop = defineProps(["weather"])
           <div class="ticket-row">
             <div class="ticket-col">
                 <img class="ticket-icon"
-                     :src="`/public/icons/day/${forecast?.day?.condition?.text.toLowerCase()}.svg`"
+                     :src="`/icons/day/${forecast?.day?.condition?.text.toLowerCase()}.svg`"
                      alt=""
                 />
             </div>

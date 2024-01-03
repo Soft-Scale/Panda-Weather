@@ -6,7 +6,7 @@ const weatherData = ref(JSON.parse(localStorage.getItem('favoriteWeather')) || [
 </script>
 
 <template>
-  <div class="favorite" v-if="weatherData">
+  <div class="favorite" v-if="weatherData.length">
     <div class="ticket" v-for="ticket of weatherData" :key="ticket.id">
       <h3 class="ticket-title">{{ ticket?.name }}</h3>
 

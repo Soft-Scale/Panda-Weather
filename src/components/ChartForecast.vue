@@ -11,12 +11,12 @@ const series = ref(null)
 
 const createForecast = () => {
   if (prop.weather) {
-    hours.value = prop.weather[0].hour.map(data => data.time.substring(11, 16))
-    temps.value = prop.weather[0].hour.map(data => roundTemperature(data.temp_c))
+    hours.value = prop?.weather[0]?.hour?.map(data => data.time.substring(11, 16))
+    temps.value = prop?.weather[0]?.hour?.map(data => roundTemperature(data.temp_c))
   }
   if(prop.graph){
-    hours.value = prop.graph[0].map(data => data.time.substring(11, 16))
-    temps.value = prop.graph[0].map(data => roundTemperature(data.temp_c))
+    hours.value = prop?.graph[0]?.map(data => data.time.substring(11, 16))
+    temps.value = prop?.graph[0]?.map(data => roundTemperature(data.temp_c))
   }
 
   chartOptions.value = {

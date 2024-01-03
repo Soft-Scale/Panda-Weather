@@ -324,6 +324,13 @@ button:focus-visible {
 .content {
   padding-top: 20px;
 }
+.content-not{
+  font-size: 18px;
+  padding: 50px 10px;
+  text-align: center;
+  background: $bg-progress-gray;
+  border: 1px solid $main-border;
+}
 
 .title-box {
   display: flex;

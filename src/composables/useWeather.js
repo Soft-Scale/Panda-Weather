@@ -11,10 +11,6 @@ const weatherList = ref( [])
 
 export function useWeather() {
   const weatherData = ref(null);
-  const weatherObject = ref({
-    cityName: '',
-    id: null
-  })
 
   async function fetchImage(cityName) {
     const { getImage } = useUnsplash();
@@ -27,37 +23,22 @@ export function useWeather() {
       const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric&appid=${apiKey}`;
       const response = await fetch(apiUrl);
       const data = await response.json();
-      const city = data.name;
+      const thumbUrl = await fetchImage(data.name);
+      const cityNamesSet = new Set(weatherList.value.map((item) => item?.name));
 
-      const thumbUrl = await fetchImage(city);
-
-      const cityNamesSet = new Set(
-        weatherList.value.map((item) => item?.name)
-      );
-
-
-      if (!cityNamesSet.has(city)) {
+      if (!cityNamesSet.has(data.name)) {
         const localCityObject = { ...data, thumbUrl };
         weatherList.value.push(localCityObject);
+
+        if (weatherList.value.length <= 5 && !cityNamesStorage.value.some(item => item.cityName === data.name)) {
+          cityNamesStorage.value.push({ cityName: data.name, id: data.id });
+          localStorage.setItem("cityNames", JSON.stringify(cityNamesStorage.value));
+        }
       }
-
-      if (!cityNamesStorage.value.some(item => item.cityName === data.name)) {
-        weatherObject.value.cityName = data.name;
-        weatherObject.value.id = data.id;
-
-        cityNamesStorage.value.push({ ...weatherObject.value });
-
-        localStorage.setItem("cityNames", JSON.stringify(cityNamesStorage.value));
-      }
-
 
       if (weatherList.value.length > 5) {
         weatherList.value.splice(-1);
-        modal({
-          title: "Too many cards!",
-          text: "Please delete one, then add a new one!",
-          icon: "info"
-        });
+        modal("Too many cards!", "Please delete one, then add a new one!", "info");
       }
 
     } catch (error) {
